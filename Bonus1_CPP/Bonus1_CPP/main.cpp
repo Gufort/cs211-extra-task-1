@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+
 	//function seconds_difference
 	assert(seconds_difference(1800.0, 3600.0)==1800.0);
 	assert(seconds_difference(3600.0, 1800.0) == -1800.0);
@@ -33,6 +34,15 @@ int main() {
 	assert(get_hours(3800) == 1);
 	assert(get_minutes(3800) == 3);
 	assert(get_seconds(3800) == 20);
+
+	//function time_to_utc
+	assert(time_to_utc(+0, 12.0) == 12.0);
+	assert(time_to_utc(+1, 12.0) == 11.0);
+	assert(time_to_utc(-1, 12.0) == 13.0);
+	assert(time_to_utc(-11, 18.0) == 5.0);
+	assert(time_to_utc(-1, 0.0) == 1.0);
+	assert(time_to_utc(-1, 23.0) == 0.0);
+
 
 
 }

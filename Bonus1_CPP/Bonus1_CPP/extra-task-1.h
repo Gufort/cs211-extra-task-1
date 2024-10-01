@@ -13,4 +13,9 @@ double hours_difference(double, double);
 //of hours, minutes, and seconds.
 double to_float_hours(int, int, int);
 
+//hours is a number of hours since midnight. return the
+//hour as seen on a 24 - hour clock.
+double to_24_hour_clock(double);
+
+
 #endif // !EXTRA_TASK

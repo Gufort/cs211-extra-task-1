@@ -54,14 +54,15 @@ int get_seconds(int seconds) {
 //utc + 0.
 double time_to_utc(int utc_offset, double time){
     double res = time - utc_offset;
-    if (res >= 24) res -= 24;
+    if (res >= 24) res -= 24.0;
     return res;
 }
 
 // return utc time in time zone utc_offset.
 double time_from_utc(int utc_offset, double time){
     double res = time + utc_offset;
-    if (res >= 0) res -= 24;
+    if (res < 0) res += 24.0;
+    else if (res >= 24) res -= 24.0;
     return res;
     /*
         return utc time in time zone utc_offset.

@@ -1,5 +1,5 @@
 #include "extra-task-1.h"
-
+#include <cassert>;
 using namespace std;
 
 double seconds_difference(double time_1, double time_2){
@@ -7,28 +7,16 @@ double seconds_difference(double time_1, double time_2){
 }
 
 double hours_difference(double time_1, double time_2){
-    return (time_2-time_1)/3600;
+    return (time_2-time_1)/3600.0;
 
 }
-//
-//double to_float_hours(int hours, int minutes, int seconds)
-//{
-//    /*
-//        return the total number of hours in the specified number
-//        of hours, minutes, and seconds.
-//
-//        precondition: 0 <= minutes < 60  and  0 <= seconds < 60
-//
-//        >>> to_float_hours(0, 15, 0)
-//        0.25
-//
-//        >>> to_float_hours(2, 45, 9)
-//        2.7525
-//
-//        >>> to_float_hours(1, 0, 36)
-//        1.01
-//    */
-//}
+
+double to_float_hours(int hours, int minutes, int seconds)
+{
+    assert(minutes >= 0 & minutes < 60);
+    assert(seconds >= 0 & seconds < 60);
+    return hours + (minutes / 60.0) + (seconds / 3600.0);
+}
 //
 //double to_24_hour_clock(double hours)
 //{

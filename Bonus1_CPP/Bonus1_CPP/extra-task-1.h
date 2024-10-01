@@ -17,5 +17,12 @@ double to_float_hours(int, int, int);
 //hour as seen on a 24 - hour clock.
 double to_24_hour_clock(double);
 
+//    three functions
+//    they are used to determine the hours part, minutes part and seconds part 
+//    of a time in seconds. e.g.:
+int get_hours(int);
+int get_minutes(int);
+int get_seconds(int);
+
 
 #endif // !EXTRA_TASK

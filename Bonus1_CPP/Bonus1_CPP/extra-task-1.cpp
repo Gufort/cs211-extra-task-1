@@ -25,28 +25,21 @@ double to_24_hour_clock(double hours){
     if (res < 0) res += 24.0;
     return res;
 }
-
-///*
-//    implement three functions
-//        * get_hours
-//        * get_minutes
-//        * get_seconds
+//    three functions
 //    they are used to determine the hours part, minutes part and seconds part 
 //    of a time in seconds. e.g.:
-//
-//    >>> get_hours(3800)
-//    1
-//
-//    >>> get_minutes(3800)
-//    3
-//
-//    >>> get_seconds(3800)
-//    20
-//
-//    in other words, if 3800 seconds have elapsed since midnight, 
-//    it is currently 01:03:20 (hh:mm:ss).
-//*/
-//
+int get_hours(int seconds) {
+    return seconds / 3600;
+}
+
+int get_minutes(int seconds) {
+    return (seconds % 3600)/60;
+}
+
+int get_seconds(int seconds) {
+    return seconds % 60;
+}
+
 //double time_to_utc(int utc_offset, double time)
 //{
 //    /*

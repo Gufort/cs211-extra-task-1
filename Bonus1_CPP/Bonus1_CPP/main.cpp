@@ -53,4 +53,6 @@ int main() {
 	assert(fabs(time_from_utc(-1, 23.0) - 22.0) < DBL_EPSILON);
 	assert(fabs(time_from_utc(+1, 23.0)) < DBL_EPSILON);
 
+	cout << "All assert is ready";
+
 }
